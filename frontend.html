@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    function gaan(){
+        fetch("http://localhost:8082/ditisvanmij")        
+        .then(response => response.text())
+        .then(r => {
+            document.getElementById("uitkomst").innerHTML = r;
+        })
+    }
+    function haalTreinOp(){
+        fetch("http://localhost:8082/eentrein")        
+        .then(response => response.json())
+        .then(r => {
+            document.getElementById("uitkomst").innerHTML = r.naam;
+        })
+    }
+    </script>
+</head>
+<body>
+    <button onclick="gaan()">naar de backend gewoon string</button>
+    <div id="uitkomst"></div>
+    <button onclick="haalTreinOp()">naar de backend trein json</button>
+    <div id="uitkomst"></div>
+</body>
+</html>
