@@ -65,5 +65,6 @@ public class SimpleCORSFilter implements Filter {
 11 maak de frontend mbv fetch
 
 12 In vbeen sla ik een nieuwe trein op in de database via de save methode van de repository
+	- in vbtwee heb ik een eigen pathvariable en kan ik via de url een eigen naam kiezen
 
 Nu ben je klaar
